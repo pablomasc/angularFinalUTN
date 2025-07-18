@@ -1,0 +1,19 @@
+@if(cargandoEstado){
+    <p>Cargando imagen</p>
+}
+@else {
+    <img src="{{listaImagen.urls.regular}}" class="imagenTagGrande">
+    <div class="contenedorDatosImagen">
+        <div class="contenedorDatosImagenCelda1">
+            <h3>Datos de la Imagen</h3>
+            <p>ID: {{idFoto}}</p>
+            <p>Autor: {{listaImagen.user.name}}</p>
+            <p>Fecha: {{listaImagen.created_at}}</p>
+            <p>Descripción: {{listaImagen.description}}</p>
+        </div>
+        <div class="contenedorDatosImagenCelda2">
+            <button routerLink="/"><</button><button (click)="descargarArchivo()">Descargar Máxima Calidad</button>
+        </div>        
+>
+    </div>
+}

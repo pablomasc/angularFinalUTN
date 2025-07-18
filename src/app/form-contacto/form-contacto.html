@@ -1,0 +1,57 @@
+<div class="contenedorFormulario">
+    <div class="celdaFormulario">
+        <h2>Formulario de Contacto</h2>
+        <p>Nos alegra un montón que tengas interés en contectarnos, mandanos alguna sugerencia o mensajito. Te responderemos lo antes posible!</p>
+        <br />
+        <form (submit)="enviarForm()">
+            <p>
+                <label for="name">Nombre</label>
+                <input 
+                    id="nombre" 
+                    type="text"
+                    required
+                    minlength="3"
+                    maxlength="30"
+                    name="nombre"
+                    [(ngModel)]="estadoForm.nombre"
+                    #nombre = "ngModel"
+                >
+                @if(nombre.invalid && nombre.dirty){
+                <span> El nombre debe tener entre 3 y 30 caracteres</span>
+                }
+            </p>
+
+            
+
+            <p>
+                <label for="email">Email</label>
+                <input 
+                    type="text"
+                    id="email"
+                    required
+                    name="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    [(ngModel)]="estadoForm.email"
+                    #email = "ngModel"
+                >
+                @if(email.invalid && email.dirty){
+                <span> El formato del mail debe ser válido</span>
+                }
+            </p>
+
+            
+
+            <p>
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="" cols="30" rows="10" [(ngModel)]="estadoForm.mensaje" #mensaje = "ngModel"></textarea>
+            </p>
+            @if(email.invalid && nombre.invalid){
+                <label for="submit"></label><button type="submit" disabled>Enviar</button>
+            }
+            @else{
+                <label for="submit"></label><button type="submit">Enviar</button>
+            }
+            &nbsp;<button type="button" routerLink="/">Volver</button>
+        </form>
+    </div>
+</div>

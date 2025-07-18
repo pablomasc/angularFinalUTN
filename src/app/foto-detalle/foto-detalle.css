@@ -1,0 +1,26 @@
+.imagenTagGrande{
+    width: 100%;
+    height: auto;
+    border-radius: 2em;
+    padding:1em;
+}
+.contenedorDatosImagen{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width:90%;
+    margin: auto;
+}
+
+.contenedorDatosImagenCelda1{
+    width:70%;
+        text-align: left;
+
+}
+.contenedorDatosImagenCelda2{
+    width:30%;
+        text-align: right;
+
+}

@@ -1,0 +1,21 @@
+
+@if(cargandoEstado){
+    <p>Cargando imagenes</p>
+}
+@else {
+      <div class="contenedorListado">
+        @for(imagen of listaImagenes; track imagen.id){
+          <app-foto-individual [imagen] = imagen  />   
+        }
+      </div>
+      <div class="contenedorBotonesListado">
+        <div class="contenedorBotonesCelda1">
+          <button (click)="paginaAnterior()">Anterior</button>
+        </div>
+        <div class="contenedorBotonesCelda2"><p>Pagina {{paginaActual}} de {{paginasTotales}}</p></div>
+        <div class="contenedorBotonesCelda3">
+          <button (click)="paginaSiguiente()">Siguiente</button>
+        </div>
+      </div>
+      <button class="botonProbarSuerte" (click)="paginaSuerte()">¡Quiero probar suerte!</button>
+}

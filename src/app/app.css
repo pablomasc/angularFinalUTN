@@ -1,0 +1,49 @@
+
+
+.logo{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.contenedorTodo{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width:100%;
+    min-height: 100dvh;
+}
+
+.contenidoPrincipal{
+    height:100%;
+    overflow: auto;
+}
+
+
+.bandera{
+    width:5em;
+    height: auto;
+    vertical-align: middle;
+    padding-top: 0.5em;
+}
+
+.fondoHeader{
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.fondoBotonContacto{
+    align-content: center;
+    text-align: center;
+    padding:1em;
+}
+
+.fondoFooter{
+    display:flex;
+}
+.fondoFooterCelda1{
+    width:30%;
+}
+.fondoFooterCelda2{
+    width:70%;
+}
